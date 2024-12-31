@@ -1,0 +1,39 @@
+/* F3V3R DR34M - ULT1M4T3 STL3 CR4CK */
+/* H4X0R D3S1GN PR0T0C0L */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(135deg, #3494E6, #2C3E50);
+    color: white;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background-color: #3494E6;
+    border-color: #3494E6;
+}
+
+.btn-primary:hover {
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+}
+
+/* R3SP0NS1V3 D3S1GN H4X */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

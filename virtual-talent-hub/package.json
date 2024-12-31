@@ -1,0 +1,17 @@
+{
+  "name": "virtual-talent-hub",
+  "version": "1.0.0",
+  "description": "Professional Virtual Talent Outsourcing Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["virtual-assistants", "outsourcing", "talent", "developers"],
+  "author": "Virtual Talent Hub",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "font-awesome": "^4.7.0"
+  }
+}
