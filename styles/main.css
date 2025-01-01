@@ -128,14 +128,14 @@ main {
     display: flex;
     align-items: center;
     min-height: 80vh;
-    background: var(--gradient-primary);
+    background: transparent;
     color: var(--text-color-light);
-    border-radius: 20px;
+    border-radius: 0;
     overflow: hidden;
     position: relative;
     padding: 4rem 6rem;
     margin-bottom: 4rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 .hero.parallax-container {
@@ -166,7 +166,6 @@ main {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 4rem 2rem;
 }
 
 .hero h1 {
@@ -205,6 +204,49 @@ main {
 .cta-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Section Office Background Specific Styling */
+.hero-office {
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-office::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.hero-office .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #1A2980;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    background: none;
+    padding: 0;
+}
+
+.hero-office .hero-content h1 {
+    background: linear-gradient(135deg, #1A2980, #26D0CE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.hero-office .hero-content p {
+    color: #2C3E50;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 /* Features Section */
