@@ -4,54 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success Cases - Virtual Talent Hub</title>
+    
     <!-- 
     ╔══════════════════════════════════════════╗
-    ║ VIRTUAL TALENT HUB - ELITE TALENT FORGE ║
+    ║ VIRTUAL TALENT HUB - SUCCESS STORIES    ║
     ╚══════════════════════════════════════════╝
-    // Cracked by the Codex Keygen Crew 2024 
+    // Cracked by F3V3R DR34M Keygen Team 2024 
     -->
+    
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/success-cases.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
+    <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body>
     <header>
         <nav>
-            <img src="assets/logo.svg" alt="Virtual Talent Hub Logo">
-            <ul>
+            <div class="logo">
+                <img src="assets/Logo/logo.png" alt="Virtual Talent Hub Logo">
+            </div>
+            <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="success-cases.html" class="nav-link active">Success Cases</a></li>
                 <li><a href="our-personal.html" class="nav-link">Our Personal</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <main id="cases">
-        <section class="cases-hero">
-            <h1>Client Success Stories</h1>
-            <p>Transforming Businesses Through Elite Talent</p>
+    <main class="success-cases-container">
+        <section class="success-hero">
+            <div class="hero-content">
+                <img src="assets/Logo/logo.png" alt="Virtual Talent Hub Logo" class="success-logo">
+                <h1>Transformative Talent Success Stories</h1>
+                <p>Discover how our exceptional talent has driven innovation and growth for businesses worldwide.</p>
+            </div>
         </section>
 
-        <section class="case-studies">
-            <div class="case-card">
-                <h2>TechStart Innovations</h2>
-                <p>Scaled development team 300% faster with our virtual developers</p>
+        <section class="success-stories-grid">
+            <div class="success-card" data-category="startup">
+                <div class="card-header">
+                    <h3>TechNova Startup Acceleration</h3>
+                    <span class="category-tag">Startup</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/success-cases/technova.jpg" alt="TechNova Success Story">
+                    <p>Our AI developers transformed TechNova's product development, reducing time-to-market by 40% and securing $2M in funding.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <strong>40%</strong>
+                            <span>Faster Development</span>
+                        </div>
+                        <div class="stat">
+                            <strong>$2M</strong>
+                            <span>Funding Secured</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="case-card">
-                <h2>Global Marketing Co.</h2>
-                <p>Reduced administrative overhead by 50% using our virtual assistants</p>
+
+            <div class="success-card" data-category="enterprise">
+                <div class="card-header">
+                    <h3>GlobalBank Digital Transformation</h3>
+                    <span class="category-tag">Enterprise</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/success-cases/globalbank.jpg" alt="GlobalBank Success Story">
+                    <p>Our UX designers reimagined GlobalBank's mobile app, increasing user engagement by 65% and reducing customer support tickets.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <strong>65%</strong>
+                            <span>User Engagement</span>
+                        </div>
+                        <div class="stat">
+                            <strong>-50%</strong>
+                            <span>Support Tickets</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="case-card">
-                <h2>E-commerce Accelerator</h2>
-                <p>Achieved 24/7 customer support with our specialized personnel</p>
+
+            <div class="success-card" data-category="ecommerce">
+                <div class="card-header">
+                    <h3>EcoStyle Marketplace Growth</h3>
+                    <span class="category-tag">E-commerce</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/success-cases/ecostyle.jpg" alt="EcoStyle Success Story">
+                    <p>Our marketing specialists developed a targeted strategy that increased EcoStyle's online sales by 80% in just six months.</p>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <strong>80%</strong>
+                            <span>Sales Growth</span>
+                        </div>
+                        <div class="stat">
+                            <strong>6 Mo</strong>
+                            <span>Timeframe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-filter">
+            <h2>Filter Success Stories</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="startup">Startup</button>
+                <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            </div>
+        </section>
+
+        <section class="testimonial-carousel">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial active">
+                    <blockquote>"Virtual Talent Hub didn't just provide talent, they provided a strategic partnership that transformed our business."</blockquote>
+                    <cite>- Sarah Chen, CTO of TechNova</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"The level of expertise and professionalism exceeded our expectations. Truly world-class talent."</blockquote>
+                    <cite>- Michael Rodriguez, CEO of GlobalBank</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"Our digital transformation wouldn't have been possible without the incredible team from Virtual Talent Hub."</blockquote>
+                    <cite>- Emma Thompson, Founder of EcoStyle</cite>
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-testimonial">←</button>
+                    <button class="next-testimonial">→</button>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Virtual Talent Hub. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/Logo/logo.png" alt="Virtual Talent Hub Logo">
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="success-cases.html">Success Stories</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Connect With Us</h4>
+                <p>Email: talent@virtualhub.com</p>
+                <p>Phone: +1 (888) TALENT-HUB</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtual Talent Hub. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="scripts/success-cases.js"></script>
