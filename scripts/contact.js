@@ -6,53 +6,80 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const talentRequestForm = document.getElementById('talentRequestForm');
+    const contactForm = document.getElementById('contact-form');
 
-    talentRequestForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Simulate form submission (replace with actual backend logic)
-        const formData = new FormData(talentRequestForm);
-        const submissionData = Object.fromEntries(formData.entries());
-
-        console.log('Talent Request Submitted:', submissionData);
-        
-        // Basic form validation
-        if (validateForm(submissionData)) {
-            alert('Talent Request Received! We will contact you soon.');
-            talentRequestForm.reset();
-        }
-    });
-
-    function validateForm(data) {
-        const requiredFields = ['name', 'email', 'message'];
-        for (let field of requiredFields) {
-            if (!data[field] || data[field].trim() === '') {
-                alert(`Please fill out the ${field} field.`);
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // Form Interaction Animations
-    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
-    formInputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.style.borderColor = '#3498db';
-            input.style.boxShadow = '0 0 10px rgba(52, 152, 219, 0.3)';
-        });
-
-        input.addEventListener('blur', () => {
-            input.style.borderColor = '#ccc';
-            input.style.boxShadow = 'none';
-        });
-    });
-
-    // Submission Logging
+    // F3V3R DR34M Keygen Style Console Log
     console.log(`
     ╔══════════════════════════════════════════╗
-    ║ TALENT REQUEST SYSTEM INITIALIZED       ║
+    ║ VIRTUAL TALENT HUB - CONTACT PORTAL     ║
     ╚══════════════════════════════════════════╝
-    // F3V3R DR34M Talent Acquisition Online
+    // Cracked by F3V3R DR34M Keygen Team 2024
     `);
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Collect form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            company: document.getElementById('company').value || 'Not Specified',
+            serviceInterest: document.getElementById('service-interest').value,
+            message: document.getElementById('message').value,
+            newsletter: document.getElementById('newsletter').checked
+        };
+
+        try {
+            // Simulate sending email (replace with actual email service)
+            const response = await fetch('https://formspree.io/f/your_formspree_endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                // Success animation and message
+                showSuccessNotification('Message sent successfully! We\'ll get back to you soon.');
+                contactForm.reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showErrorNotification('Oops! Something went wrong. Please try again.');
+        }
+    });
+
+    // Success Notification
+    function showSuccessNotification(message) {
+        const notification = document.createElement('div');
+        notification.classList.add('notification', 'success');
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.classList.add('fade-out');
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 1000);
+        }, 3000);
+    }
+
+    // Error Notification
+    function showErrorNotification(message) {
+        const notification = document.createElement('div');
+        notification.classList.add('notification', 'error');
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.classList.add('fade-out');
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 1000);
+        }, 3000);
+    }
+});
