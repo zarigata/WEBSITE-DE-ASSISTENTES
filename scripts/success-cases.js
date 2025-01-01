@@ -85,4 +85,4 @@ document.addEventListener('DOMContentLoaded', () => {
     ╚══════════════════════════════════════════╝
     // F3V3R DR34M Victory Log Initialized
     `);
-});
+}); // Added closing parenthesis here
