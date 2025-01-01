@@ -1,0 +1,26 @@
+{
+    "name": "virtual-talent-hub",
+    "version": "1.0.0",
+    "description": "Professional platform for hiring virtual talent",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx http-server .",
+        "build": "echo 'Build process completed'",
+        "lint": "eslint .",
+        "test": "echo 'No tests specified'"
+    },
+    "keywords": [
+        "virtual-assistants",
+        "outsourcing",
+        "talent-hub"
+    ],
+    "author": "F3V3R DR34M Team",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "eslint": "^8.45.0"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
