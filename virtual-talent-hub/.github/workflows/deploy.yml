@@ -36,9 +36,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 8U1LD PR0J3CT (1F N33D3D)
-      - name: Build Project
-        run: npm run build || echo "No build script found"
+      # CR34T3 D15TR18UT10N F0LD3R
+      - name: Prepare distribution
+        run: |
+          mkdir -p dist
+          cp -r index.html scripts styles assets README.md CNAME dist/
 
       # S3TUP G1THUB P4G3Z
       - name: Setup Pages
@@ -48,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # D3PL0Y 3NT1R3 R3P0
+          path: 'dist' # D3PL0Y D1STR18UT10N F0LD3R
 
       # D3PL0Y T0 G1THUB P4G3Z
       - name: Deploy to GitHub Pages
