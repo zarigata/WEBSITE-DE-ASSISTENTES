@@ -5,72 +5,88 @@
  // Cracked by F3V3R DR34M Keygen Team 2024
  */
 
-const southAmericanCountries = [
-    { name: 'Brazil', flag: '🇧🇷', code: 'BR' },
-    { name: 'Argentina', flag: '🇦🇷', code: 'AR' },
-    { name: 'Chile', flag: '🇨🇱', code: 'CL' },
-    { name: 'Colombia', flag: '🇨🇴', code: 'CO' },
-    { name: 'Peru', flag: '🇵🇪', code: 'PE' },
-    { name: 'Uruguay', flag: '🇺🇾', code: 'UY' },
-    { name: 'Ecuador', flag: '🇪🇨', code: 'EC' }
+const teamMemberData = [
+    {
+        photo: 'assets/photos/ceo1.png',
+        name: 'Carlos Rodriguez',
+        role: 'Chief Executive Officer',
+        country: 'Argentina',
+        flag: '🇦🇷'
+    },
+    {
+        photo: 'assets/photos/man1.png',
+        name: 'João Silva',
+        role: 'Senior Tech Recruiter',
+        country: 'Brazil',
+        flag: '🇧🇷'
+    },
+    {
+        photo: 'assets/photos/man2.png',
+        name: 'Miguel Fernandez',
+        role: 'Global Talent Coordinator',
+        country: 'Colombia',
+        flag: '🇨🇴'
+    },
+    {
+        photo: 'assets/photos/tele1.png',
+        name: 'Sofia Martinez',
+        role: 'Customer Success Manager',
+        country: 'Chile',
+        flag: '🇨🇱'
+    },
+    {
+        photo: 'assets/photos/tele2.png',
+        name: 'Isabella Pereira',
+        role: 'Remote Work Specialist',
+        country: 'Uruguay',
+        flag: '🇺🇾'
+    },
+    {
+        photo: 'assets/photos/woman2.png',
+        name: 'Valentina Morales',
+        role: 'Project Management Expert',
+        country: 'Peru',
+        flag: '🇵🇪'
+    },
+    {
+        photo: 'assets/photos/woman3.png',
+        name: 'Camila Santos',
+        role: 'Digital Solutions Architect',
+        country: 'Ecuador',
+        flag: '🇪🇨'
+    }
 ];
-
-const roles = [
-    'Senior Virtual Assistant',
-    'Tech Talent Coordinator',
-    'Customer Success Manager',
-    'Remote Work Specialist',
-    'Global Talent Recruiter',
-    'Project Management Expert',
-    'Digital Solutions Architect'
-];
-
-const teamMemberPhotos = [
-    'assets/photos/ceo1.png',
-    'assets/photos/man1.png',
-    'assets/photos/tele1.png',
-    'assets/photos/tele2.png'
-];
-
-function generateName() {
-    const firstNames = [
-        'Ana', 'Carlos', 'Maria', 'João', 'Sofia', 'Pedro', 'Isabella', 
-        'Miguel', 'Luisa', 'Rafael', 'Camila', 'Gabriel', 'Valentina'
-    ];
-    const lastNames = [
-        'Silva', 'Santos', 'Oliveira', 'Rodriguez', 'Martinez', 'Fernandez', 
-        'Pereira', 'Gonzalez', 'Costa', 'Morales', 'Rocha', 'Mendez'
-    ];
-    
-    return `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;
-}
 
 function generateTeamMembers() {
-    const teamGrid = document.getElementById('team-members');
+    const teamSlider = document.getElementById('team-members');
     
-    // Shuffle arrays to randomize selection
-    const shuffledCountries = southAmericanCountries.sort(() => 0.5 - Math.random());
-    const shuffledRoles = roles.sort(() => 0.5 - Math.random());
-    const shuffledPhotos = teamMemberPhotos.sort(() => 0.5 - Math.random());
+    // Clear any existing content
+    teamSlider.innerHTML = '';
     
-    for (let i = 0; i < shuffledPhotos.length; i++) {
-        const country = shuffledCountries[i % shuffledCountries.length];
+    // Duplicate team members to create a continuous loop
+    const extendedTeamData = [...teamMemberData, ...teamMemberData, ...teamMemberData];
+    
+    // Generate team members
+    extendedTeamData.forEach((member) => {
         const memberDiv = document.createElement('div');
         memberDiv.classList.add('team-member');
         
         memberDiv.innerHTML = `
-            <img src="${shuffledPhotos[i]}" alt="Team Member" class="team-member-image">
+            <img src="${member.photo}" alt="${member.name}" class="team-member-image">
             <div class="team-member-info">
-                <div class="team-member-name">${generateName()}</div>
-                <div class="team-member-role">${shuffledRoles[i % shuffledRoles.length]}</div>
+                <div class="team-member-name">${member.name}</div>
+                <div class="team-member-role">${member.role}</div>
                 <div class="team-member-country">
-                    ${country.name} ${country.flag}
+                    <span>${member.country}</span> <span>${member.flag}</span>
                 </div>
             </div>
         `;
         
-        teamGrid.appendChild(memberDiv);
-    }
+        teamSlider.appendChild(memberDiv);
+    });
+
+    // Set CSS variable for total number of members
+    teamSlider.style.setProperty('--total-members', teamMemberData.length.toString());
 }
 
 document.addEventListener('DOMContentLoaded', generateTeamMembers);
