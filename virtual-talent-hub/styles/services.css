@@ -1,0 +1,410 @@
+:root {
+    /* Light Mode Colors */
+    --apple-white: #ffffff;
+    --apple-black: #1d1d1f;
+    --apple-gray: #86868b;
+    --apple-blue: #0066cc;
+    --apple-background-light: #f5f5f7;
+    
+    /* Dark Mode Colors */
+    --dark-background: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-primary: #26D0CE;
+    --dark-text-primary: #e0e0e0;
+    --dark-text-secondary: #b0b0b0;
+}
+
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text-primary);
+}
+
+/* Services Container */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .services-container {
+    background-color: var(--dark-background);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .hero-section {
+    background-color: var(--dark-surface);
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .hero-section h1 {
+    color: var(--dark-primary);
+}
+
+.hero-section p {
+    color: var(--apple-gray);
+    max-width: 800px;
+    margin: 1rem auto;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .hero-section p {
+    color: var(--dark-text-secondary);
+}
+
+/* Service Cards */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-card {
+    background-color: var(--apple-white);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .service-card {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.dark-mode .service-card:hover {
+    box-shadow: 0 15px 30px rgba(255,255,255,0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .service-card h3 {
+    color: var(--dark-primary);
+}
+
+.service-card p {
+    color: var(--apple-gray);
+    transition: color 0.3s ease;
+}
+
+.dark-mode .service-card p {
+    color: var(--dark-text-secondary);
+}
+
+/* Service Details Styling */
+#service-details {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--apple-background-light);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode #service-details {
+    background-color: var(--dark-surface);
+}
+
+.service-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.service-icon {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+.service-header h2 {
+    margin: 0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .service-header h2 {
+    color: var(--dark-primary);
+}
+
+.service-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--apple-gray);
+    transition: color 0.3s ease;
+}
+
+.dark-mode .service-description {
+    color: var(--dark-text-secondary);
+}
+
+.service-features h3,
+.service-technologies h3 {
+    border-bottom: 2px solid var(--apple-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.dark-mode .service-features h3,
+.dark-mode .service-technologies h3 {
+    border-bottom-color: var(--dark-primary);
+}
+
+.service-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.service-features li::before {
+    content: '✓';
+    margin-right: 1rem;
+    color: var(--apple-blue);
+    font-weight: bold;
+}
+
+.dark-mode .service-features li {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+.dark-mode .service-features li::before {
+    color: var(--dark-primary);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badge {
+    background-color: var(--apple-blue);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .tech-badge {
+    background-color: var(--dark-primary);
+}
+
+/* Spawn Animation */
+@keyframes spawnAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-spawn {
+    animation: spawnAnimation 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Service Card Active State */
+.service-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border: 2px solid var(--apple-blue);
+}
+
+.dark-mode .service-card.active {
+    border-color: var(--dark-primary);
+    box-shadow: 0 15px 30px rgba(255,255,255,0.1);
+}
+
+/* Service Details */
+.detail-container {
+    background-color: var(--apple-background-light);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.dark-mode .detail-container {
+    background-color: var(--dark-surface);
+}
+
+.detail-container h2 {
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .detail-container h2 {
+    color: var(--dark-primary);
+}
+
+.detail-container p {
+    color: var(--apple-gray);
+    transition: color 0.3s ease;
+}
+
+.dark-mode .detail-container p {
+    color: var(--dark-text-secondary);
+}
+
+.detail-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.detail-container ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .detail-container ul li {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+.detail-container ul li:last-child {
+    border-bottom: none;
+}
+
+.detail-container ul li::before {
+    content: '✓';
+    margin-right: 0.5rem;
+    color: var(--apple-blue);
+}
+
+.dark-mode .detail-container ul li::before {
+    color: var(--dark-primary);
+}
+
+/* Development Detail */
+.development-detail {
+    background-color: var(--apple-white);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .development-detail {
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+}
+
+.development-detail h2 {
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .development-detail h2 {
+    color: var(--dark-primary);
+}
+
+.development-detail p {
+    color: var(--apple-gray);
+    transition: color 0.3s ease;
+}
+
+.dark-mode .development-detail p {
+    color: var(--dark-text-secondary);
+}
+
+.development-detail ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dark-mode .development-detail ul li {
+    border-bottom-color: rgba(255,255,255,0.1);
+    color: var(--dark-text-secondary);
+}
+
+.development-detail ul li::before {
+    content: '✓';
+    margin-right: 0.5rem;
+    color: var(--apple-blue);
+}
+
+.dark-mode .development-detail ul li::before {
+    color: var(--dark-primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Scrollbar Styles for Dark Mode */
+.dark-mode::-webkit-scrollbar {
+    width: 12px;
+}
+
+.dark-mode::-webkit-scrollbar-track {
+    background: var(--dark-surface);
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+    background-color: var(--dark-primary);
+    border-radius: 6px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--dark-surface);
+    color: var(--dark-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
