@@ -1,23 +1,58 @@
-// F3V3R DR34M - C0NT4CT H4X
-// CR4CK3D C0MMUN1C4T10N PR0T0C0L
+/*
+ ╔══════════════════════════════════════════╗
+ ║ VIRTUAL TALENT HUB - ELITE TALENT FORGE ║
+ ╚══════════════════════════════════════════╝
+ // Cracked by F3V3R DR34M Keygen Team 2024
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', (e) => {
+    const talentRequestForm = document.getElementById('talentRequestForm');
+
+    talentRequestForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // H4X0R V4L1D4T10N M0D3
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
+        // Simulate form submission (replace with actual backend logic)
+        const formData = new FormData(talentRequestForm);
+        const submissionData = Object.fromEntries(formData.entries());
 
-        // PR0 4L3RT - M3SS4G3 S3NT
-        if (name && email && message) {
-            alert('Message sent successfully! Our team will contact you soon.');
-            contactForm.reset();
-        } else {
-            alert('ERROR: 1NV4L1D 1NPUT D3T3CT3D');
+        console.log('Talent Request Submitted:', submissionData);
+        
+        // Basic form validation
+        if (validateForm(submissionData)) {
+            alert('Talent Request Received! We will contact you soon.');
+            talentRequestForm.reset();
         }
     });
-});
+
+    function validateForm(data) {
+        const requiredFields = ['name', 'email', 'message'];
+        for (let field of requiredFields) {
+            if (!data[field] || data[field].trim() === '') {
+                alert(`Please fill out the ${field} field.`);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Form Interaction Animations
+    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.style.borderColor = '#3498db';
+            input.style.boxShadow = '0 0 10px rgba(52, 152, 219, 0.3)';
+        });
+
+        input.addEventListener('blur', () => {
+            input.style.borderColor = '#ccc';
+            input.style.boxShadow = 'none';
+        });
+    });
+
+    // Submission Logging
+    console.log(`
+    ╔══════════════════════════════════════════╗
+    ║ TALENT REQUEST SYSTEM INITIALIZED       ║
+    ╚══════════════════════════════════════════╝
+    // F3V3R DR34M Talent Acquisition Online
+    `);

@@ -1,26 +1,41 @@
-// F3V3R DR34M - M41N SCR1PT
-// ULT1M4T3 H4X0R M0D3 4CT1V4T3D
+/*
+ ╔══════════════════════════════════════════╗
+ ║ VIRTUAL TALENT HUB - ELITE TALENT FORGE ║
+ ╚══════════════════════════════════════════╝
+ // Cracked by F3V3R DR34M Keygen Team 2024
+ */
 
+// Main Application Logic
 document.addEventListener('DOMContentLoaded', () => {
-    // 1337 N4V1G4T10N SM00TH1NG
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Smooth scroll for navigation
+    const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 
-    // PR0 T34M H0V3R 3FF3CTZ
-    const serviceCards = document.querySelectorAll('#services .card, #success-cases .card');
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.classList.add('shadow-lg', 'scale-105');
+    // Interactive CTA Button
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('mouseenter', () => {
+            ctaButton.style.transform = 'scale(1.05)';
         });
-        card.addEventListener('mouseleave', () => {
-            card.classList.remove('shadow-lg', 'scale-105');
+        ctaButton.addEventListener('mouseleave', () => {
+            ctaButton.style.transform = 'scale(1)';
         });
-    });
+    }
+
+    // Console Easter Egg
+    console.log(`
+    ╔══════════════════════════════════════════╗
+    ║ VIRTUAL TALENT HUB - ELITE TALENT FORGE ║
+    ╚══════════════════════════════════════════╝
+    // Cracked by F3V3R DR34M Keygen Team 2024
+    `);
 });
