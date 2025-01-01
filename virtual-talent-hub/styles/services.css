@@ -158,6 +158,93 @@
     }
 }
 
+/* Navigation Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(245, 245, 247, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--apple-black);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--apple-blue);
+}
+
+.nav-link.active {
+    color: var(--apple-blue);
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--apple-blue);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--apple-black);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
+
 /* Dark Mode Styles */
 .dark-mode .services-container {
     background-color: var(--apple-black);
@@ -184,4 +271,23 @@
 .dark-mode .service-card p,
 .dark-mode .detail-container p {
     color: var(--apple-gray);
+}
+
+/* Dark Mode Navigation */
+.dark-mode header {
+    background-color: rgba(29, 29, 31, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .nav-link {
+    color: var(--apple-white);
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+    color: #26D0CE;
+}
+
+.dark-mode .nav-toggle span {
+    background-color: var(--apple-white);
 }
