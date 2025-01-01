@@ -34,9 +34,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 120px; /* Increased top padding to account for fixed header */
+    padding-top: 120px;
     position: relative;
     background-color: var(--apple-background-light);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 15px;
     transition: background-color 0.3s ease;
     overflow: hidden;
